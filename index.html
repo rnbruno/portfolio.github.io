@@ -1,0 +1,87 @@
+     </div>
+                                            <div class="col-sm-6 mb-4">
+                                                <label for="filezip">Arquivo ZIP </label>
+                                                <div class="input-group">
+                                                    <div class="custom-file">
+                                                        <input type="file" name="fileimage[]" class="custom-file-input" id="filezip">
+                                                        <label class="custom-file-label" for="filezip"></label>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-6 mb-4">
+                                                <label for="filezip">Documentos </label>
+                                                <div class="input-group">
+                                                    <div class="custom-file">
+                                                        <input type="file" name="fileimage[]" class="custom-file-input" id="filedocumentos" multiple='multiple'>
+                                                        <label class="custom-file-label" for="filezip"></label>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4 ">
+                                                <label for="" class="" >Descrição para o(s) documento(s): </label>
+                                                <div class="mb-3">
+                                                    <input type="text" class="form-control" placeholder="Informe o local mínimo 3 caracteres" name="descricao_doc"  id="descricao_doc" minlength="3"></input>
+                                                </div>						
+                                                    
+                                            </div>
+                                                                                      
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type='button' name='' value=''  class='btn btn-light btn-xg shadow-md ml-3' disabled>
+                                                É necessário zipar a [files], [libs] e bpm com a extensão .zip.
+                                            </button>
+            
+                                            <button type="submit" class="btn btn-success modal-header-second caixa-tool" data-toggle='tooltip' data-placement='bottom' title='Salvar permissão' data-dismiss="modal"><i class="fas fa-save"></i></button>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="tab-pane fade" id="profile-inserir-local" role="tabpanel" aria-labelledby="custom-inserir-local">
+                                
+                                    <form id="frm2" enctype="multipart/form-data"  method="POST"  >
+                                        <input type="hidden"  name="usuario_id" value="<?= $_SESSION['usuario_id'] ?>">
+
+                                        <div id="bloco_tipo" class="row input-group mb-3" >
+                                                                                 
+                                            <?php ?>
+                                            <div class="col-sm-4 ">
+                                                <label for="" class="" >Nome do setor: </label>
+                                                <div class="mb-3">
+                                                    <input type="text" class="form-control" placeholder="Informe o local mínimo 3 caracteres" name="novo_local" id="novo_local" minlength="3" required></input>
+                                                </div>						
+                                                    
+                                            </div>
+
+                                            <div class="col-sm-4 ">
+                                                <label for="" class="" >Escolha o Setor do Macro Processo: </label>
+                                                <select class="form-control" placeholder="Informe o local" name="macro_processo" id="macro_processo" required style="width: 500px;">
+                                                    <option value=""> Escolha um setor </option>
+                                                    <?php foreach($resultado_macro_processo as $item){
+                                                    ?>
+
+                                                        <option value="<?= $item["macro_processo_id"]?>"><?= $item["macro_processo_nome"]?></option>
+                                                    <?php
+                                                    }
+                                                    ?>
+                                                    
+                                                </select>						
+                                                    
+                                            </div>
+
+                                                </br></br>
+                                            
+                                            
+                                                                                      
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type='button' name='' value='' title="Ao criar um novo setor vinculado a um macro processo um novo item é disponibilizado no portfólio para adicionar links."  class='btn btn-light btn-xg shadow-md ml-3' disabled>
+                                                Criar setor vinculado a macro proceso.
+                                            </button>
+            
+                                            <button type="button" class="btn btn-primary modal-header-second caixa-tool"  onclick="novolocal()" data-toggle='tooltip' data-placement='bottom' title='Salvar permissão'><i class="fas fa-save"></i></button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
