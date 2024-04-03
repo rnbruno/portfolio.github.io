@@ -3,27 +3,6 @@ $imge2 = 'img/FAQ1.png';
 $img3 = 'img/BIV_biblioteca_virtual_idema_logotipo_10.png';
 $img345 = 'img/BIV_biblioteca_virtual_idema_logotipo_lower.png';
 
-try {
-
-	$tipo_material = new Biblioteca($pdo);
-	$resultado_tipo = $tipo_material->listar_tipos_materiais_nivel_2_e_item();
-	$n2 = new Biblioteca($pdo);
-	$resultado_n2 = $n2->listar_nivel_2();
-	$biblioteca_2 = new Biblioteca($pdo);
-	if ($sobre = $biblioteca_2->listarSobre()) {
-	} else {
-		throw new Exception();
-	};
-	$arquivos = new Biblioteca2($pdo);
-	$resultado_arquivo = $arquivos->ItensAcessadosAcervo();
-	$verificar_arquivo = new Protocol3();
-	$resultado_verificar = $verificar_arquivo->previewPDf($resultado_arquivo, DOCUMENTOS_URL, 1);
-	// var_dump($resultado_verificar);
-
-} catch (\Throwable $th) {
-
-}
-?>
 
 <!DOCTYPE html>
 <html lang="pt-br" style="background-color:#663399">
@@ -32,23 +11,22 @@ try {
 	<meta charset="utf-8">
 	<title>Biblioteca virtual - Idema</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="../apis/dist/css/adminlte.min.css">
-	<link rel="stylesheet" href="../apis/plugins/bootstrap-4.6.0/css/bootstrap.min.css">
-	<link rel="stylesheet" href="../apis/plugins/fontawesome-free/css/all.min.css">
-	<link rel="stylesheet" href="../apis/plugins/jquery-ui/jquery-ui.css">
-	<link rel="stylesheet" href="../apis/plugins/jquery-ui/jquery-ui.min.css">
-	<link rel="stylesheet" href="../apis/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
-	<link rel="stylesheet" href="../apis/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
-	<link rel="stylesheet" href="../apis/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
-	<link rel="stylesheet" href="../apis/plugins/treeview/jquery.treeview.css" />
-	<link rel="stylesheet" href="../apis/plugins/select2/css/select2.min.css">
-	<link rel="stylesheet" href="../apis/plugins/sumoselect/sumoselect.css">
+	<link rel="stylesheet" href="apis/plugins/css/adminlte.min.css">
+	<link rel="stylesheet" href="apis/plugins/bootstrap-4.6.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="apis/plugins/fontawesome-free/css/all.min.css">
+	<link rel="stylesheet" href="apis/plugins/jquery-ui/jquery-ui.css">
+	<link rel="stylesheet" href="apis/plugins/jquery-ui/jquery-ui.min.css">
+	<link rel="stylesheet" href="apis/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+	<link rel="stylesheet" href="apis/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+	<link rel="stylesheet" href="apis/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+	<!-- <link rel="stylesheet" href="apis/plugins/treeview/jquery.treeview.css" />
+	<link rel="stylesheet" href="apis/plugins/select2/css/select2.min.css">
+	<link rel="stylesheet" href="apis/plugins/sumoselect/sumoselect.css"> -->
 
-	<link rel="stylesheet" type="text/css" href="import/biblioteca.css">
+	<link rel="stylesheet" type="text/css" href="biblioteca/biblioteca.css">
 
 </head>
 
-<link rel="stylesheet" type="text/css" href="biblioteca.css">
 </head>
 
 <body>
