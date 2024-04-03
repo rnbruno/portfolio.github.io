@@ -1,7 +1,7 @@
-$img1 = 'img/IMG000000000223814.jpg';
+<!-- $img1 = 'img/IMG000000000223814.jpg';
 $imge2 = 'img/FAQ1.png';
 $img3 = 'img/BIV_biblioteca_virtual_idema_logotipo_10.png';
-$img345 = 'img/BIV_biblioteca_virtual_idema_logotipo_lower.png';
+$img345 = 'img/BIV_biblioteca_virtual_idema_logotipo_lower.png'; -->
 
 
 <!DOCTYPE html>
@@ -9,20 +9,6 @@ $img345 = 'img/BIV_biblioteca_virtual_idema_logotipo_lower.png';
 
 <head>
 	<meta charset="utf-8">
-	<title>Biblioteca virtual - Idema</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="apis/plugins/css/adminlte.min.css">
-	<link rel="stylesheet" href="apis/plugins/bootstrap-4.6.0/css/bootstrap.min.css">
-	<link rel="stylesheet" href="apis/plugins/fontawesome-free/css/all.min.css">
-	<link rel="stylesheet" href="apis/plugins/jquery-ui/jquery-ui.css">
-	<link rel="stylesheet" href="apis/plugins/jquery-ui/jquery-ui.min.css">
-	<link rel="stylesheet" href="apis/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
-	<link rel="stylesheet" href="apis/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
-	<link rel="stylesheet" href="apis/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
-	<!-- <link rel="stylesheet" href="apis/plugins/treeview/jquery.treeview.css" />
-	<link rel="stylesheet" href="apis/plugins/select2/css/select2.min.css">
-	<link rel="stylesheet" href="apis/plugins/sumoselect/sumoselect.css"> -->
-
 	<link rel="stylesheet" type="text/css" href="biblioteca/biblioteca.css">
 
 </head>
@@ -38,7 +24,7 @@ $img345 = 'img/BIV_biblioteca_virtual_idema_logotipo_lower.png';
 			<div class="container">
 				<div class="row mb-3 return-button" onclick="location.reload()">
 					<div class="col-xl-12 text-center" style="">
-						<img src=<?= $img3; ?> alt='logo' width="100%" height="100%">
+						<img src="img/BIV_biblioteca_virtual_idema_logotipo_10.png" alt='logo' width="100%" height="100%">
 					</div>
 				</div>
 			</div>
@@ -51,7 +37,7 @@ $img345 = 'img/BIV_biblioteca_virtual_idema_logotipo_lower.png';
 						<form method="post" id="pesquisa" action="#" method="POST">
 							<div class="input-group">
 								<div class="input-group mb-4">
-									<img src=<?= $img345; ?> alt='logo' width="7%" height="auto" class=" return-button image_search" onclick="location.reload()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<img src='img/BIV_biblioteca_virtual_idema_logotipo_lower.png' alt='logo' width="7%" height="auto" class=" return-button image_search" onclick="location.reload()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 									<div class="search-box">
 										<input type="text" id="search" placeholder="O que você está procurando?">
 										<button type="button"><i class="fas fa-search"></i></button>
@@ -80,56 +66,37 @@ $img345 = 'img/BIV_biblioteca_virtual_idema_logotipo_lower.png';
 									</h5>
 
 									<div class="text-left pb-2 pt-2">
-										<? try {
-											if (count($resultado_tipo) > 0) {
-												foreach ($resultado_tipo as $item) {
-													if ($item["nivel_2"] == '1' || is_null($item["nivel_2"])) { ?></b>
-														<div class="form-check m-1 menu" name="item_111[]" data-toggle="collapse" href="#sub_1_<?= $item["tipo_material_id"] ?>" role="button" aria-expanded="false" aria-controls="sub_1_<?= $item["tipo_material_id"] ?>" id="item_1_<?= $item["tipo_material_id"] ?>">
+										</b>
+														<div class="form-check m-1 menu" name="item_111[]" data-toggle="collapse" href="#sub_1_1" role="button" aria-expanded="false" aria-controls="sub_1_1" id="item_1_1">
 															<i class="fas fa-chevron-right textbg-purple-light-3"></i>
-															<label class="form-check-label link-item" for="tipo_material_<?= $item["tipo_material_id"] ?>"><b>
-																	<?= $item["descricao"] ?></b>
+															<label class="form-check-label link-item" for="tipo_material_1"><b>
+																	Cartilhas</b>
 															</label>
 														</div>
-														<div class="collapse menu" id="sub_1_<?= $item["tipo_material_id"] ?>">
-															<input type="hidden" id="controler_sub_1_<?= $item["tipo_material_id"] ?>" value=0>
+														<div class="collapse menu" id="sub_1_1">
+															<input type="hidden" id="controler_sub_1_1" value=0>
 														</div>
 
-													<? } else { ?>
-
-															<div class="form-check m-1" name="item_2[]" data-toggle="collapse" href="#sub_1_<?= $item["tipo_material_id"] ?>" id="item_1_<?= $item["tipo_material_id"] ?>">
+												
+															<div class="form-check m-1" name="item_2[]" data-toggle="collapse" href="#sub_1_2" id="item_1_2">
 																<i class="fas fa-chevron-right textbg-purple-light-3"></i>
-																<button class="form-check-label link-item-b text-truncate" style="max-width: 290px;"  for="item_1_<?= $item["tipo_material_id"] ?>"><b>
-																		<?= $item["descricao"] ?></b>
+																<button class="form-check-label link-item-b text-truncate" style="max-width: 290px;"  for="item_1_2"><b>
+																		Revista</b>
 																</button>
 															</div>
-															<div class="collapse menu" id="sub_1_<?= $item["tipo_material_id"] ?>" >
-																<? $array_itens = explode("*|*", $item["nivel_2"]);
-																$array_id = explode("*|*", $item["nivel_2_id"]);
-																foreach ($array_itens as $key => $value) {
-																	// echo $value;
-																	if ($key > 0) { ?>
-																		<div id="collapse<?= $array_id[$key]?>" class="itens-recuo " data-toggle="collapse"  href="#final_1_<?= $array_id[$key] ?>" aria-controls="sub_2_<?= $array_id[$key] ?>" aria-labelledby="item_2_<?= $array_id[$key] ?>" id="item_2_<?= $array_id[$key] ?>">
+															<div class="collapse menu" id="sub_1_2" >
+																		<div id="collapse2" class="itens-recuo " data-toggle="collapse"  href="#final_1_2" aria-controls="sub_2_2" aria-labelledby="item_2_2" id="item_2_2">
 																			<i class="fas fa-chevron-right textbg-purple-light-41"></i>
-																			<label class="form-check-label link-item3" for="item_2_<?= $array_id[$key] ?>"><b>
-																					<?= $value ?></b>
+																			<label class="form-check-label link-item3" for="item_2_2"><b>
+																					Revista Digital</b>
 																			</label>
 																		</div>
-																		<div class="collapse menu" id="final_1_<?= $array_id[$key] ?>">
-																			<input type="hidden" id="controler_final_1_<?= $array_id[$key] ?>" value=0>
+																		<div class="collapse menu" id="final_1_2">
+																			<input type="hidden" id="controler_final_1_2" value=0>
 																		</div>
-																		<?
-																	}
-																} ?>
+																
 															</div>
-
-													<? } ?>
-												<?		}
-												?>
-										<?
-											}
-										} catch (\Throwable $th) {
-										} ?>
-
+										
 									</div>
 								</div>
 							</div>
@@ -139,7 +106,7 @@ $img345 = 'img/BIV_biblioteca_virtual_idema_logotipo_lower.png';
 										<b>SOBRE</b>
 									</h4>
 									<div class="text font-text-biblioteca p-4 bg-white-light-3">
-										<?= $sobre["descricao"] ?>
+										Está Biblioteca virtual é utilizada para apresentar documentos importantes...
 									</div>
 								</div>
 								&nbsp;
