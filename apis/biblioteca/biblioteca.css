@@ -1,0 +1,299 @@
+.accordion-biblioteca {
+    font-size: x-large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #FCF9CE;
+    ;
+    color: #2e0557 !important;
+}
+
+.visualizador {
+    height: 270.449px;
+    width: 725.38px;
+}
+
+.button_icon_2:hover {
+    background-color: #bdc1c490 !important;
+    cursor: pointer;
+}
+
+.none {
+    display: none;
+}
+
+.bloco_pesquisa {
+    opacity: 50;
+    /* Inicia invisível */
+    transition: opacity 1s ease;
+}
+
+.bg-white-light-3 {
+    background-color: white;
+}
+
+.bg-purple-light-3 {
+    background-color: #663399;
+}
+
+.textbg-purple-light-3 {
+    color: #663399;
+}
+
+.textbg-purple-light-41 {
+    color: #993399;
+}
+
+
+.search-box {
+    /* display: inline-block; */
+    border-radius: 10px;
+    /* Ajuste o valor conforme desejado para arredondar mais ou menos as bordas */
+    overflow: hidden;
+    border: 1px solid #663399;
+}
+
+.search-box input[type="text"] {
+    width: 800px;
+    /* Largura da caixa de pesquisa */
+    padding: 10px;
+    /* Espaçamento interno */
+    border: none;
+    /* Remove a borda padrão */
+    outline: none;
+    /* Remove a borda de foco */
+    float: left;
+}
+@media (max-width: 600px) {
+    .search-box input[type="text"] {
+        width: 200px; /* Definir a largura como 100% para ocupar a largura total da tela */
+        max-width: 300px; /* Definir a largura máxima para evitar que a caixa de pesquisa ocupe toda a largura da tela */
+        float: none; /* Remover o float para centralizar a caixa de pesquisa */
+        margin: 0 auto; /* Centralizar horizontalmente a caixa de pesquisa */
+    }
+    .image_search{
+        width: 70px;
+    }
+}
+
+.search-box button {
+    background-color: #663399;
+    /* Cor de fundo do botão */
+    color: #fff;
+    /* Cor do texto do botão */
+    padding: 10px 20px;
+    /* Espaçamento interno */
+    border: none;
+    /* Remove a borda */
+    border-radius: 0 10px 10px 0;
+    /* Arredonda apenas a borda direita do botão */
+    cursor: pointer;
+    float: left;
+}
+
+.vertical-line {
+    width: 3px;
+    /* Largura da barra vertical */
+    height: 100px;
+    /* Altura da barra vertical */
+    background-color: #99cc66;
+    /* Cor da barra vertical */
+    margin-left: 20px;
+    /* Espaçamento à esquerda da barra vertical */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    /* Centralizar horizontalmente */
+    align-items: center;
+    /* Centralizar verticalmente */
+
+    /* Altura igual à altura da viewport */
+
+
+}
+
+.social-icon {
+    color: #fff;
+    /* Cor dos ícones */
+    font-size: 24px;
+    /* Tamanho dos ícones */
+    margin: 0 10px;
+    /* Espaçamento entre os ícones */
+}
+
+.texto-com-linha {
+    border-bottom: 2px solid #663399;
+    /* Cor da linha (vermelho neste exemplo) */
+    padding-bottom: 5px;
+    /* Espaço entre o texto e a linha */
+}
+
+.font-text-biblioteca {
+    /* font-family: 'Inter Variable Font'; */
+    font-variation-settings: "slnt" 0, "wght" 400;
+    /* Definindo inclinação (0) e peso (400) */
+}
+
+.carousel-control {
+    padding-top: 10%;
+    width: 5%;
+}
+
+.thumbnail {
+    width: 100px;
+    height: 100px;
+    background-color: skyblue;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+
+.link-item {
+    color: #663399;
+}
+
+.link-item2 {
+    color: #330066;
+}
+.link-item2:active {
+    color: #330066;
+
+    text-decoration: underline !important;
+}
+
+.link-item:active {
+    color: #663366;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.link-item:visited {
+    color: #663366;
+    text-decoration: underline;
+  }
+
+  .link-item2:visited {
+    color: #663366;
+    text-decoration: underline;
+  }
+.link-item2:hover {
+    color: #9966cc;
+    text-decoration: underline;
+    cursor: pointer;
+
+}
+.link-item3:visited {
+    color: #993399;
+    text-decoration: underline;
+  }
+.link-item3 {
+    color: #993399;
+}
+.link-item3:active {
+    color: #993399;
+    text-decoration: underline !important;
+}
+
+.link-item-b:visited {
+    color: #330066 !important;
+    text-decoration: underline;
+  }
+.link-item-b {
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    border: none !important;
+    background-color: transparent !important;
+    color: #330066 !important;
+    /* text-decoration: underline; */
+    /* Sublinhado */
+    text-align: left !important;
+    padding-left: 15px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.link-item-b:active {
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    border: none !important;
+    background-color: transparent !important;
+    color: #330066 !important;
+    text-decoration: underline;
+    /* Sublinhado */
+    text-align: left !important;
+    padding-left: 15px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.itens-recuo {
+    padding-left: 40px;
+    /* Altere o valor conforme necessário */
+}
+
+.submenu {
+    list-style-type: none;
+    text-decoration: underline;
+    /* Sublinhado */
+    cursor: pointer;
+    /* Altera o cursor para uma mão */
+}
+
+.lista_ {
+    display: block;
+}
+
+.lista_oculta {
+    display: none;
+}
+
+.item_ativo {}
+
+.item_desativado {}
+
+.botao-voltar {
+    background-color: #663399;
+    /* Cor de fundo do botão */
+    color: #fff;
+    /* Cor do texto */
+    border: none;
+    /* Remover borda padrão do botão */
+    border-radius: 20px;
+    /* Borda arredondada */
+    padding: 4px 18px;
+    /* Espaçamento interno */
+    cursor: pointer;
+    /* Cursor ao passar o mouse */
+    font-size: 16px;
+    /* Tamanho do texto */
+}
+
+.botao-voltar .icone {
+    margin-right: 10px;
+    /* Espaçamento entre o ícone e o texto */
+}
+
+.botao-voltar:hover {
+    background-color: #330066;
+    /* Cor de fundo do botão ao passar o mouse */
+}
+
+.ul-a {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.li-a{
+    padding: 0px 0px 0px 10px;
+}
+.botao-voltar{
+    margin: 10px 10px 10px 10px;
+}
+.historico-a{
+    color: #663399;
+}
+.return-button:hover{
+    cursor: pointer;
+}
