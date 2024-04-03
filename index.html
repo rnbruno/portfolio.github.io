@@ -1,26 +1,3 @@
-<?php
-
-require_once "../src/tecnico/conf/constantesBanco.php";
-require_once "../src/tecnico/conf/funcoesSemSession.php";
-require_once "footer_faq.php";
-require_once PATH_CLASSES . "Biblioteca2.php";
-require_once PATH_CLASSES . "Biblioteca.php";
-require_once "pdf_acoes.php";
-
-if ((!is_null(safepost('texto_pesquisa'))) && (safepost('texto_pesquisa') != "")) {
-	$texto_pesquisa = safepost('texto_pesquisa');
-} else {
-	$texto_pesquisa = "";
-}
-
-if ((!is_null(safepost('pesquisa_item'))) && (safepost('pesquisa_item') != "")) {
-	$pesquisa_item = safepost('pesquisa_item');
-} else {
-	$pesquisa_item = "";
-}
-
-// $link_svg = '/inetpub/wwwroot/Alo_idema/bootstrap-3.0.0/bootstrap-icons-1.4.1';
-// $list_icon_file = scandir($link_svg); //arrays de icones das categorias
 $img1 = 'img/IMG000000000223814.jpg';
 $imge2 = 'img/FAQ1.png';
 $img3 = 'img/BIV_biblioteca_virtual_idema_logotipo_10.png';
