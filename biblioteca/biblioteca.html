@@ -1,9 +1,3 @@
-<!-- $img1 = 'img/IMG000000000223814.jpg';
-$imge2 = 'img/FAQ1.png';
-$img3 = 'img/BIV_biblioteca_virtual_idema_logotipo_10.png';
-$img345 = 'img/BIV_biblioteca_virtual_idema_logotipo_lower.png'; -->
-
-
 <!DOCTYPE html>
 <html lang="pt-br" style="background-color:#663399">
 
@@ -24,7 +18,7 @@ $img345 = 'img/BIV_biblioteca_virtual_idema_logotipo_lower.png'; -->
 			<div class="container">
 				<div class="row mb-3 return-button" onclick="location.reload()">
 					<div class="col-xl-12 text-center" style="">
-						<img src="img/BIV_biblioteca_virtual_idema_logotipo_10.png" alt='logo' width="100%" height="100%">
+						<img src="../img/BIV_biblioteca_virtual_idema_logotipo_10.png" alt='logo' width="100%" height="100%">
 					</div>
 				</div>
 			</div>
@@ -124,61 +118,39 @@ $img345 = 'img/BIV_biblioteca_virtual_idema_logotipo_lower.png'; -->
 														<div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
 
 															<div class="carousel-inner">
-																<? $temp = 0;
-
-																for ($i = 0; $i < count($resultado_verificar["base64"]); $i++) {
-																	if ($i % 3 === 0) {
-																		$temp = 0;
-																		$acervo_id = $resultado_verificar["acervo_id"][$i];
-
-																?>
+															
 																		<div class="carousel-item <? if ($i == 0) {
 																										echo 'active';
 																									}; ?>">
 																			<div class="row">
 
 																				<div class="col-md-4 mb-3"  >
-																					<iframe name='' id='arquivoow' src="<?= 'data:application/pdf;base64,' . $resultado_verificar["base64"][$i] ?>" width="200" height="250" frameborder="0"> </iframe>
-																							<div class="card-body"<?if($resultado_verificar["arquivo"][$i]){ echo "onclick='visualizar_documento({$acervo_id})'";}?> >
-																								<div class="text-truncate link-item2" title="<?=$resultado_verificar["titulo"][$i]?>"><?=$resultado_verificar["titulo"][$i]?></div>
+																					<iframe name='' id='arquivoow' src="data:application/pdf;base64," width="200" height="250" frameborder="0"> </iframe>
+																							<div class="card-body" onclick='visualizar_documento(5)'>
+																								<div class="text-truncate link-item2" title="Documento">Informação</div>
 	
 																							</div>
 																				</div>
-																				<?
-																			} else {
-
-																				$temp++;
-																				if ($temp == 2) {
-																				?>
+					
 																					<div class="col-md-4 mb-3" >
-																						<iframe id="img_temp" src="<?= 'data:application/pdf;base64,' . $resultado_verificar["base64"][$i] ?>" width="200" height="250" frameborder="0"></iframe>
-																						<div class="card-body" <?if($resultado_verificar["arquivo"][$i]){ echo "onclick='visualizar_documento({$acervo_id})'";}?> >
-																								<div class="text-truncate link-item2" title="<?=$resultado_verificar["titulo"][$i]?>"><?=$resultado_verificar["titulo"][$i]?></div>
+																						<iframe id="img_temp" src="data:application/pdf;base64," width="200" height="250" frameborder="0"></iframe>
+																						<div class="card-body" onclick='visualizar_documento(10)'>
+																								<div class="text-truncate link-item2" title="Este documento">D</div>
 																						</div>
 																					
 																					</div>
 
 																			</div>
 																		</div>
-																	<?
-																				} else {
-																	?>
+																	
 																		<div class="col-md-4 mb-3"  >
-																			<iframe id="img_temp" src="<?= 'data:application/pdf;base64,' . $resultado_verificar["base64"][$i] ?>" width="200" height="250" frameborder="0"></iframe>
-																							<div class="card-body" <?if($resultado_verificar["arquivo"][$i]){ echo "onclick='visualizar_documento({$acervo_id})'";}?>>
-																								<div class="text-truncate link-item2" title="<?=$resultado_verificar["titulo"][$i]?>"><?=$resultado_verificar["titulo"][$i]?></div>
+																			<iframe id="img_temp" src="data:application/pdf;base64," width="200" height="250" frameborder="0"></iframe>
+																							<div class="card-body" onclick='visualizar_documento(15)'>
+																								<div class="text-truncate link-item2" title="Documento exemplo">Este documento</div>
 																							</div>
 
 																		</div>
-																<?
-																				}
-																			} ?>
-
-
-
-															<?
-																} ?>
-
+						
 
 															</div>
 														</div>
@@ -206,35 +178,9 @@ $img345 = 'img/BIV_biblioteca_virtual_idema_logotipo_lower.png'; -->
 				<!-- /Row -->
 			</div>
 
-			<?php //<?php footer_faq();
-			?>
-			<?php footer_faq($sobre); ?>
 
 
-			<script src="../apis/plugins/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-			<script src="../apis/plugins/jquery-ui/jquery-ui.min.js"></script>
-			<script src="../apis/plugins/moment/moment.min.js"></script>
-			<script src="../apis/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-			<script type="text/javascript" src="../apis/plugins/datatables/jquery.dataTables.min.js"></script>
-			<script type="text/javascript" src="../apis/plugins/sweetalert2/sweetalert2.all.min.js"></script>
-			<script type="text/javascript" src="../apis/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-			<script type="text/javascript" src="../apis/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-			<script type="text/javascript" src="../apis/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-			<script type="text/javascript" src="../apis/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
-			<script type="text/javascript" src="../apis/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
-			<script type="text/javascript" src="../apis/plugins/jszip/jszip.min.js"></script>
-			<script type="text/javascript" src="../apis/plugins/pdfmake/pdfmake.min.js"></script>
-			<script type="text/javascript" src="../apis/plugins/pdfmake/vfs_fonts.js"></script>
-			<script type="text/javascript" src="../apis/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
-			<script type="text/javascript" src="../apis/plugins/datatables-buttons/js/buttons.print.min.js"></script>
-			<script type="text/javascript" src="../apis/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
-			<script type="text/javascript" src="../apis/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
-			<script type="text/javascript" src="../apis/plugins/inputmask/mask.js"></script>
-			<script type="text/javascript" src="../apis/plugins/sumoselect/jquery.sumoselect.min.js"></script>
-			<script type="text/javascript" src="../apis/plugins/jquery-validation/jquery.validate.min.js"></script>
-			<script type="text/javascript" src="../apis/plugins/inputmask/jquery.inputmask.min.js"></script>
-			<script type="text/javascript" src="../apis/plugins/md5/md5.js"></script>
-			<script type="text/javascript" src="biblioteca.js?G=1"> </script>
+			<script type="text/javascript" src="../apis/bibliotecabiblioteca.js?G=1"> </script>
 			<script>
 				var ip;
 				var info = '<?= DOCUMENTOS_URL ?>';

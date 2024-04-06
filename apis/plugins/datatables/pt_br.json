@@ -1,0 +1,244 @@
+{
+    "emptyTable": "Nenhum registro encontrado",
+    "info": "Mostrando de _START_ at&eacute; _END_ de _TOTAL_ registros",
+    "infoEmpty": "Mostrando 0 at&eacute; 0 de 0 registros",
+    "infoFiltered": "(Filtrados de _MAX_ registros)",
+    "infoThousands": ".",
+    "loadingRecords": "Carregando...",
+    "processing": "Processando...",
+    "zeroRecords": "Nenhum registro encontrado",
+    "search": "Pesquisar",
+    "paginate": {
+        "next": "Pr&oacute;ximo",
+        "previous": "Anterior",
+        "first": "Primeiro",
+        "last": "&Uacute;ltimo"
+    },
+    "aria": {
+        "sortAscending": ": Ordenar colunas de forma ascendente",
+        "sortDescending": ": Ordenar colunas de forma descendente"
+    },
+    "select": {
+        "rows": {
+            "_": "Selecionado %d linhas",
+            "1": "Selecionado 1 linha"
+        },
+        "cells": {
+            "1": "1 c&eacute;lula selecionada",
+            "_": "%d c&eacute;lulas selecionadas"
+        },
+        "columns": {
+            "1": "1 coluna selecionada",
+            "_": "%d colunas selecionadas"
+        }
+    },
+    "buttons": {
+        "copySuccess": {
+            "1": "Uma linha copiada com sucesso",
+            "_": "%d linhas copiadas com sucesso"
+        },
+        "collection": "Cole&ccedil;&atilde;o  <span class=\"ui-button-icon-primary ui-icon ui-icon-triangle-1-s\"><\/span>",
+        "colvis": "Visibilidade da Coluna",
+        "colvisRestore": "Restaurar Visibilidade",
+        "copy": "Copiar",
+        "copyKeys": "Pressione ctrl ou u2318 + C para copiar os dados da tabela para a &aacute;rea de transfer&ecirc;ncia do sistema. Para cancelar, clique nesta mensagem ou pressione Esc..",
+        "copyTitle": "Copiar para a &Aacute;rea de Transfer&ecirc;ncia",
+        "csv": "CSV",
+        "excel": "Excel",
+        "pageLength": {
+            "-1": "Mostrar todos os registros",
+            "_": "Mostrar %d registros"
+        },
+        "pdf": "PDF",
+        "print": "Imprimir",
+        "createState": "Criar estado",
+        "removeAllStates": "Remover todos os estados",
+        "removeState": "Remover",
+        "renameState": "Renomear",
+        "savedStates": "Estados salvos",
+        "stateRestore": "Estado %d",
+        "updateState": "Atualizar"
+    },
+    "autoFill": {
+        "cancel": "Cancelar",
+        "fill": "Preencher todas as c&eacute;lulas com",
+        "fillHorizontal": "Preencher c&eacute;lulas horizontalmente",
+        "fillVertical": "Preencher c&eacute;lulas verticalmente"
+    },
+    "lengthMenu": "Exibir _MENU_ Resultados por p&aacute;gina",
+    "searchBuilder": {
+        "add": "Adicionar Condi&ccedil;&atilde;o",
+        "button": {
+            "0": "Construtor de Pesquisa",
+            "_": "Construtor de Pesquisa (%d)"
+        },
+        "clearAll": "Limpar Tudo",
+        "condition": "Condi&ccedil;&atilde;o",
+        "conditions": {
+            "date": {
+                "after": "Depois",
+                "before": "Antes",
+                "between": "Entre",
+                "empty": "Vazio",
+                "equals": "Igual",
+                "not": "N&atilde;o",
+                "notBetween": "N&atilde;o Entre",
+                "notEmpty": "N&atilde;o Vazio"
+            },
+            "number": {
+                "between": "Entre",
+                "empty": "Vazio",
+                "equals": "Igual",
+                "gt": "Maior Que",
+                "gte": "Maior ou Igual a",
+                "lt": "Menor Que",
+                "lte": "Menor ou Igual a",
+                "not": "N&atilde;o",
+                "notBetween": "N&atilde;o Entre",
+                "notEmpty": "N&atilde;o Vazio"
+            },
+            "string": {
+                "contains": "Cont&eacute;m",
+                "empty": "Vazio",
+                "endsWith": "Termina Com",
+                "equals": "Igual",
+                "not": "N&atilde;o",
+                "notEmpty": "N&atilde;o Vazio",
+                "startsWith": "Come&ccedil;a Com",
+                "notContains": "N&atilde;o cont&eacute;m",
+                "notStarts": "N&atilde;o come&ccedil;a com",
+                "notEnds": "N&atilde;o termina com"
+            },
+            "array": {
+                "contains": "Cont&eacute;m",
+                "empty": "Vazio",
+                "equals": "Igual à",
+                "not": "N&atilde;o",
+                "notEmpty": "N&atilde;o vazio",
+                "without": "N&atilde;o possui"
+            }
+        },
+        "data": "Data",
+        "deleteTitle": "Excluir regra de filtragem",
+        "logicAnd": "E",
+        "logicOr": "Ou",
+        "title": {
+            "0": "Construtor de Pesquisa",
+            "_": "Construtor de Pesquisa (%d)"
+        },
+        "value": "Valor",
+        "leftTitle": "Crit&eacute;rios Externos",
+        "rightTitle": "Crit&eacute;rios Internos"
+    },
+    "searchPanes": {
+        "clearMessage": "Limpar Tudo",
+        "collapse": {
+            "0": "Pain&eacute;is de Pesquisa",
+            "_": "Pain&eacute;is de Pesquisa (%d)"
+        },
+        "count": "{total}",
+        "countFiltered": "{shown} ({total})",
+        "emptyPanes": "Nenhum Painel de Pesquisa",
+        "loadMessage": "Carregando Pain&eacute;is de Pesquisa...",
+        "title": "Filtros Ativos",
+        "showMessage": "Mostrar todos",
+        "collapseMessage": "Fechar todos"
+    },
+    "thousands": ".",
+    "datetime": {
+        "previous": "Anterior",
+        "next": "Pr&oacute;ximo",
+        "hours": "Hora",
+        "minutes": "Minuto",
+        "seconds": "Segundo",
+        "amPm": [
+            "am",
+            "pm"
+        ],
+        "unknown": "-",
+        "months": {
+            "0": "Janeiro",
+            "1": "Fevereiro",
+            "10": "Novembro",
+            "11": "Dezembro",
+            "2": "Mar&ccedil;o",
+            "3": "Abril",
+            "4": "Maio",
+            "5": "Junho",
+            "6": "Julho",
+            "7": "Agosto",
+            "8": "Setembro",
+            "9": "Outubro"
+        },
+        "weekdays": [
+            "Domingo",
+            "Segunda-feira",
+            "Ter&ccedil;a-feira",
+            "Quarta-feira",
+            "Quinte-feira",
+            "Sexta-feira",
+            "S&aacute;bado"
+        ]
+    },
+    "editor": {
+        "close": "Fechar",
+        "create": {
+            "button": "Novo",
+            "submit": "Criar",
+            "title": "Criar novo registro"
+        },
+        "edit": {
+            "button": "Editar",
+            "submit": "Atualizar",
+            "title": "Editar registro"
+        },
+        "error": {
+            "system": "Ocorreu um erro no sistema (<a target=\"\\\" rel=\"nofollow\" href=\"\\\">Mais informa&ccedil;&otilde;es<\/a>)."
+        },
+        "multi": {
+            "noMulti": "Essa entrada pode ser editada individualmente, mas n&atilde;o como parte do grupo",
+            "restore": "Desfazer altera&ccedil;&otilde;es",
+            "title": "Multiplos valores",
+            "info": "Os itens selecionados contêm valores diferentes para esta entrada. Para editar e definir todos os itens para esta entrada com o mesmo valor, clique ou toque aqui, caso contr&aacute;rio, eles manter&atilde;o seus valores individuais."
+        },
+        "remove": {
+            "button": "Remover",
+            "confirm": {
+                "_": "Tem certeza que quer deletar %d linhas?",
+                "1": "Tem certeza que quer deletar 1 linha?"
+            },
+            "submit": "Remover",
+            "title": "Remover registro"
+        }
+    },
+    "decimal": ",",
+    "stateRestore": {
+        "creationModal": {
+            "button": "Criar",
+            "columns": {
+                "search": "Busca de colunas",
+                "visible": "Visibilidade da coluna"
+            },
+            "name": "Nome:",
+            "order": "Ordernar",
+            "paging": "Pagina&ccedil;&atilde;o",
+            "scroller": "Posi&ccedil;&atilde;o da barra de rolagem",
+            "search": "Busca",
+            "searchBuilder": "Mecanismo de busca",
+            "select": "Selecionar",
+            "title": "Criar novo estado",
+            "toggleLabel": "Inclui:"
+        },
+        "duplicateError": "J&aacute; existe um estado com esse nome",
+        "emptyError": "N&atilde;o pode ser vazio",
+        "emptyStates": "Nenhum estado salvo",
+        "removeConfirm": "Confirma remover %s?",
+        "removeError": "Falha ao remover estado",
+        "removeJoiner": "e",
+        "removeSubmit": "Remover",
+        "removeTitle": "Remover estado",
+        "renameButton": "Renomear",
+        "renameLabel": "Novo nome para %s:",
+        "renameTitle": "Renomear estado"
+    }
+}
