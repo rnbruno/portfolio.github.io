@@ -44,14 +44,14 @@ $('.collapse').on('show.bs.collapse', function () {
             async: false,
             success: function (data) {
 
-                // Verificando se `data` é um array e se tem pelo menos um elemento
+                // Verificando se `data` ï¿½ um array e se tem pelo menos um elemento
                 if (Array.isArray(data) && data.length > 0) {
                     // Iterando sobre os dados recebidos
                     data.forEach(function (element) {
                         var link = $("<a>")
                             .attr("href", info + "biblioteca/" + element.link)
                             .attr("target", "arquivo_" + element.acervo_id);
-                        // Criando um novo item de lista <li> e anexando-o à <ul>
+                        // Criando um novo item de lista <li> e anexando-o ï¿½ <ul>
                         var li = $("<li>").attr("onclick", "visualizar_documento(" + element.acervo_id + ")").text(element.label).addClass("text-truncate").css("max-width", "290px").attr("title", element.label).append(link);
                         var icon = $("<i>").addClass("fas fa-angle-double-right textbg-purple-light-3 mr-2");
                         li.prepend(icon);
@@ -59,9 +59,9 @@ $('.collapse').on('show.bs.collapse', function () {
                     });
                     $('#' + id).addClass("item_ativo");
                 } else {
-                    // Se `data` estiver vazio ou não for um array, você pode lidar com isso aqui
+                    // Se `data` estiver vazio ou nï¿½o for um array, vocï¿½ pode lidar com isso aqui
                     console.log("Dados vazios ou em formato incorreto.");
-                    var li = $("<li>").text("O item está vazio");
+                    var li = $("<li>").text("O item estï¿½ vazio");
                     ul.append(li);
                 }
             },
@@ -90,7 +90,7 @@ function visualizar_documento(id) {
         },
         async: false,
         success: function (data) {
-            // Verificando se `data` é um array e se tem pelo menos um elemento
+            // Verificando se `data` ï¿½ um array e se tem pelo menos um elemento
             let historico = "";
             if (data.descricao_n2 != "") {
                 historico = data.descricao.toUpperCase() + " > " + data.descricao_n2.toUpperCase() + " > " + data.label.toUpperCase();
@@ -106,7 +106,7 @@ function visualizar_documento(id) {
             var larguraDiv = $('#container_esquerdo').height();
             height_div_esquerdo = parseFloat(larguraDiv)*0.65;
             height_div_esquerdo = height_div_esquerdo.toString()+'px';
-            $("#visualizacao").html("<div class='bg-white-light-3 historico-a texto-com-linha p-3'><b>INÍCIO >" + historico + "</b></div><div class='bg-white-light-3'><button onclick='location.reload()' class='botao-voltar'><i class='fas fa-arrow-left'></i>    <b>Voltar</b></button></div><ul class='ul-a bg-white-light-3'><li class='li-a'>Título: " + data.label + "</li><li class='li-a'>Autor: " + data.autor + "</li><li class='li-a'>Ano: " + data.ano + "</li><li class='li-a'>Palavra-chave: " + data.palavra_chave + "</li></ul><iframe name='" + id + "' id='arquivo_" + id + "' src='" + link_historico + "' width='100%' height='"+height_div_esquerdo +"'> </iframe>");
+            $("#visualizacao").html("<div class='bg-white-light-3 historico-a texto-com-linha p-3'><b>INï¿½CIO >" + historico + "</b></div><div class='bg-white-light-3'><button onclick='location.reload()' class='botao-voltar'><i class='fas fa-arrow-left'></i>    <b>Voltar</b></button></div><ul class='ul-a bg-white-light-3'><li class='li-a'>Tï¿½tulo: " + data.label + "</li><li class='li-a'>Autor: " + data.autor + "</li><li class='li-a'>Ano: " + data.ano + "</li><li class='li-a'>Palavra-chave: " + data.palavra_chave + "</li></ul><iframe name='" + id + "' id='arquivo_" + id + "' src='" + link_historico + "' width='100%' height='"+height_div_esquerdo +"'> </iframe>");
             acessoItem(id);
         },
         error: function () {
@@ -143,7 +143,7 @@ $(function () {
                     li.attr("aria-label", item.category + " : " + item.label);
                 }
                 li.on("click", function () {
-                    // Chama sua função com o item selecionado como argumento
+                    // Chama sua funï¿½ï¿½o com o item selecionado como argumento
                     autoCompleteCategoria(item);
                   
 
@@ -157,8 +157,8 @@ $(function () {
     $("#search").catcomplete({
         
         delay: 20,
-        source:"ajax_listar_itens.php?term="+$("#search").val(),
-        minLength: 3, // Define o tamanho mínimo do termo como 3 caracteres
+        source:"ajax_listar_itens.json?term="+$("#search").val(),
+        minLength: 3, // Define o tamanho mï¿½nimo do termo como 3 caracteres
         select: function(event, ui){
             return false;
         },
@@ -180,7 +180,7 @@ function autoCompleteCategoria(item) {
     var larguraDiv = $('#container_esquerdo').height();
     height_div_esquerdo = parseFloat(larguraDiv)*0.65;
     height_div_esquerdo = height_div_esquerdo.toString()+'px';
-    $("#visualizacao").html("<div class='bg-white-light-3 historico-a texto-com-linha p-3'><b>INÍCIO >" + historico + "</b></div><div class='bg-white-light-3'><button onclick='location.reload()' class='botao-voltar'><i class='fas fa-arrow-left'></i>    <b>Voltar</b></button></div><ul class='ul-a bg-white-light-3'><li class='li-a'>Título: " + item.label + "</li><li class='li-a'>Autor: " + item.autor + "</li><li class='li-a'>Ano: " + item.ano + "</li><li class='li-a'>Palavra-chave: " + item.palavra_chave + "</li></ul><iframe name='" + item.acervo_id + "' id='arquivo_" + item.acervo_id + "' src='" + link_historico + "' width='100%' height='"+height_div_esquerdo +"'> </iframe>");
+    $("#visualizacao").html("<div class='bg-white-light-3 historico-a texto-com-linha p-3'><b>INï¿½CIO >" + historico + "</b></div><div class='bg-white-light-3'><button onclick='location.reload()' class='botao-voltar'><i class='fas fa-arrow-left'></i>    <b>Voltar</b></button></div><ul class='ul-a bg-white-light-3'><li class='li-a'>Tï¿½tulo: " + item.label + "</li><li class='li-a'>Autor: " + item.autor + "</li><li class='li-a'>Ano: " + item.ano + "</li><li class='li-a'>Palavra-chave: " + item.palavra_chave + "</li></ul><iframe name='" + item.acervo_id + "' id='arquivo_" + item.acervo_id + "' src='" + link_historico + "' width='100%' height='"+height_div_esquerdo +"'> </iframe>");
 }
 function acessoItem(acervo_id) {
     $.ajax({
