@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-br" style="background-color:#663399">
+
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../apis/biblioteca/biblioteca.css">
+
+</head>
+
+</head>
+
+<body>
+
+	<div class="container-fluid">
+		<!-- Row -->
+
+		<div class="row bg-white-light-3">
+			<div class="container">
+				<div class="row mb-3 return-button" onclick="location.reload()">
+					<div class="col-xl-12 text-center" style="">
+						<img src="../img/BIV_biblioteca_virtual_idema_logotipo_10.png" alt='logo' width="100%" height="100%">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="container mt-sm-60 mt-30 " id="container_1">
+				<div class="hk-row">
+					</br>
+					<div class="form-group" style="width: 1000px; margin: 0 auto;">
+						<form method="post" id="pesquisa" action="#" method="POST">
+							<div class="input-group">
+								<div class="input-group mb-4">
+									<img src='../img/BIV_biblioteca_virtual_idema_logotipo_lower.png' alt='logo' width="7%" height="auto" class=" return-button image_search" onclick="location.reload()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<div class="search-box">
+										<input type="text" id="search" placeholder="O que você está procurando?">
+										<button type="button"><i class="fas fa-search"></i></button>
+									</div>
+								</div>
+							</div>
+						</form>	
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid container-mid">
+			<!-- Row -->
+			<div class="row">
+				<div class="col-xl-12 pa-0">
+					<div class="faq-search-wrap search-camp">
+
+					</div>
+					<div class="container mt-sm-60 mt-30 " id="container_1">
+						<div class="hk-row">
+							<div class="col-xl-4 " id="container_esquerdo">
+								<div class="bg-white-light-3">
+									<h5 class="textbg-purple-light-3 text-center p-3 texto-com-linha">
+										Todas as categorias
+									</h5>
+
+									<div class="text-left pb-2 pt-2">
+										</b>
+														<div class="form-check m-1 menu" name="item_111[]" data-toggle="collapse" href="#sub_1_1" role="button" aria-expanded="false" aria-controls="sub_1_1" id="item_1_1">
+															<i class="fas fa-chevron-right textbg-purple-light-3"></i>
+															<label class="form-check-label link-item" for="tipo_material_1"><b>
+																	Cartilhas</b>
+															</label>
+														</div>
+														<div class="collapse menu" id="sub_1_1">
+															<input type="hidden" id="controler_sub_1_1" value=0>
+														</div>
+
+												
+															<div class="form-check m-1" name="item_2[]" data-toggle="collapse" href="#sub_1_2" id="item_1_2">
+																<i class="fas fa-chevron-right textbg-purple-light-3"></i>
+																<button class="form-check-label link-item-b text-truncate" style="max-width: 290px;"  for="item_1_2"><b>
+																		Revista</b>
+																</button>
+															</div>
+															<div class="collapse menu" id="sub_1_2" >
+																		<div id="collapse2" class="itens-recuo " data-toggle="collapse"  href="#final_1_2" aria-controls="sub_2_2" aria-labelledby="item_2_2" id="item_2_2">
+																			<i class="fas fa-chevron-right textbg-purple-light-41"></i>
+																			<label class="form-check-label link-item3" for="item_2_2"><b>
+																					Revista Digital</b>
+																			</label>
+																		</div>
+																		<div class="collapse menu" id="final_1_2">
+																			<input type="hidden" id="controler_final_1_2" value=0>
+																		</div>
+																
+															</div>
+										
+									</div>
+								</div>
+							</div>
+							<div id="visualizacao" class="col-xl-8">
+								<div class=" bg-white-light-3">
+									<h4 class="textbg-purple-light-3 text-left p-3 texto-com-linha">
+										<b>SOBRE</b>
+									</h4>
+									<div class="text font-text-biblioteca p-4 bg-white-light-3">
+										Está Biblioteca virtual é utilizada para apresentar documentos importantes...
+									</div>
+								</div>
+								&nbsp;
+								<div class=" bg-white-light-3">
+									<h4 class="textbg-purple-light-3 text-left p-3 texto-com-linha">
+										<b>MAIS ACESSADOS</b>
+									</h4>
+
+									<div class="container">
+										<section class="pt-5 pb-5">
+											<div class="container">
+												<div class="row">
+
+													<div class="col-12">
+														<div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+
+															<div class="carousel-inner">
+															
+																		<div class="carousel-item <? if ($i == 0) {
+																										echo 'active';
+																									}; ?>">
+																			<div class="row">
+
+																				<div class="col-md-4 mb-3"  >
+																					<iframe name='' id='arquivoow' src="data:application/pdf;base64," width="200" height="250" frameborder="0"> </iframe>
+																							<div class="card-body" onclick='visualizar_documento(5)'>
+																								<div class="text-truncate link-item2" title="Documento">Informação</div>
+	
+																							</div>
+																				</div>
+					
+																					<div class="col-md-4 mb-3" >
+																						<iframe id="img_temp" src="data:application/pdf;base64," width="200" height="250" frameborder="0"></iframe>
+																						<div class="card-body" onclick='visualizar_documento(10)'>
+																								<div class="text-truncate link-item2" title="Este documento">D</div>
+																						</div>
+																					
+																					</div>
+
+																			</div>
+																		</div>
+																	
+																		<div class="col-md-4 mb-3"  >
+																			<iframe id="img_temp" src="data:application/pdf;base64," width="200" height="250" frameborder="0"></iframe>
+																							<div class="card-body" onclick='visualizar_documento(15)'>
+																								<div class="text-truncate link-item2" title="Documento exemplo">Este documento</div>
+																							</div>
+
+																		</div>
+						
+
+															</div>
+														</div>
+													</div>
+													
+													<div class="col-12 text-right">
+														<a class="btn btn-light mb-3 mr-1" href="#carouselExampleIndicators2" role="button" data-slide="prev">
+															<i class="fa fa-arrow-left"></i>
+														</a>
+														<a class="btn btn-light mb-3 " href="#carouselExampleIndicators2" role="button" data-slide="next">
+															<i class="fa fa-arrow-right"></i>
+														</a>
+													</div>
+												</div>
+										</section>
+
+									</div>
+								</div>
+							</div><!-- k-row-->
+						</div>
+
+
+					</div>
+				</div>
+				<!-- /Row -->
+			</div>
+
+			<script src="../apis/plugins/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+			<script src="../apis/plugins/jquery-ui/jquery-ui.min.js"></script>
+			<!-- <script src="apis/plugins/moment/moment.min.js"></script> -->
+			<script src="../apis/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+			<script type="text/javascript" src="../apis/plugins/datatables/jquery.dataTables.min.js"></script>
+			<script type="text/javascript" src="../apis/plugins/sweetalert2/sweetalert2.all.min.js"></script>
+			<script type="text/javascript" src="../apis/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+			<script type="text/javascript" src="../apis/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+			<script type="text/javascript" src="../apis/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+			<script type="text/javascript" src="../apis/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+			<script type="text/javascript" src="../apis/plugins/sumoselect/jquery.sumoselect.min.js"></script>
+			
+
+			<script type="text/javascript" src="../apis/biblioteca/biblioteca.js?G=1"> </script>
+			<script>
+				var ip;
+				var info = '<?= DOCUMENTOS_URL ?>';
+				$(".page-link").click(function() {
+					var button_id = $(this).attr("id");
+					var dataLinkValue = parseInt($("#" + button_id).text(), 10);
+					var mostrar = $("#mostrar").val();
+					var quantidadeInicial = $("#quantidadeI").val();
+					var t = Math.floor(quantidadeInicial / mostrar);
+					if (dataLinkValue < t) {
+						if (button_id != "mid") {
+							$.ajax({
+								url: 'ajax_barra_inferior.php',
+								dataType: 'html',
+								type: 'POST',
+								data: {
+									link: dataLinkValue,
+									mostrar: mostrar,
+									quantidadeInicial: quantidadeInicial,
+								},
+								success: function(data) {
+									$("#bloco_pesquisa").html(data);
+									$(".page-item").removeClass("active");
+									$(this).addClass("active");
+									footer_(dataLinkValue, button_id);
+								},
+								error: function() {
+									console.log('erro');
+								}
+							});
+						}
+					}
+				});
+			</script>
+
+
+</body>
+
+</html><!--  -->
