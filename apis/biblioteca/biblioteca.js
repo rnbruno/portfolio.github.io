@@ -193,13 +193,6 @@ function acessoItem(acervo_id) {
         },
     });
 }
-$.ajax({
-    url: 'ajax_inserir_acesso.php',
-    type: 'POST',
-    data: {
-        tipo: 2
-    },
-});
 
 
 

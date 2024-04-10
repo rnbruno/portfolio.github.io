@@ -1,46 +1,3 @@
-<?php
-// chamar o arquivo de funções
-require_once "../src/tecnico/conf/constantesBanco.php";
-require_once "../src/tecnico/conf/funcoesSemSession.php";
-require_once PATH_CLASSES . "Biblioteca2.php";
-require_once PATH_CLASSES . "Biblioteca.php";
-
-$retorno['sucesso'] = false;
-$retorno['mensagem'] = toUtf("Erro ao inserir");
-$retorno['debug'] = "";
-
-if ((!is_null(safepost('link'))) && (safepost('link')!= "")) {
-    $link = safepost('link');
-} else {
-    $link = 0;
-}
-
-if ((!is_null(safepost('mostrar'))) && (safepost('mostrar')!= "")) {
-    $botao_mostrar = safepost('mostrar');
-} else {
-    $botao_mostrar = 0;
-}
-
-if ((!is_null(safepost('quantidadeInicial'))) && (safepost('quantidadeInicial')!= "")) {
-    $quantidadeInicial = safepost('quantidadeInicial');
-} else {
-    $quantidadeInicial = 0;
-}
-
-try {
-    $nivel_2 = "";
-    $tipo_marcados = "";
-    $pesquisa_com_item = new Biblioteca($pdo);
-    $limit = $botao_mostrar;
-    $limit_final = $limit * $link;
-    $resultado_geral = $pesquisa_com_item->BuscarBibliotecaComItem("", "", "", "", $tipo_marcados, "", "", $nivel_2, $botao_mostrar,$limit_final);
-    $quantidade_registros = 0;
-    $quantidade_registros = $resultado_geral["buscar_quantidade"];
-    if ($botao_mostrar > $quantidade_registros) {
-        $botao_mostrar = $quantidade_registros;
-    }
-    $resultado_imprimir = $resultado_geral['buscar_arquivos'];
-?>
     <div id="prazo" class="">
         <h5 class="text-center">
             <span class=" p-2 col-xl-10">Mostrar <button class="btn btn-light badge badge-light" style="font-size: 15px">15</button> |<button class="btn btn-link">50</button>|<button class="btn btn-link">100</button></span>
@@ -76,10 +33,3 @@ try {
         ?>
     </div>
     <script type="text/javascript" src="biblioteca_.js"></script>
-<?php
-
-
-} catch (Exception $e) {
-
-}
-?>
