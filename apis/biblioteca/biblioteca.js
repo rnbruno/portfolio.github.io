@@ -84,7 +84,7 @@ function visualizar_documento(id) {
     $.ajax({
         type: "POST",
         dataType: 'json',
-        url: 'ajax_visualizar_documento.php',
+        url: 'ajax_listar_itens.json',
         data: {
             acervo_id: id,
         },
